@@ -14,6 +14,8 @@
 		C8D172F81E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8D172F61E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld */; };
 		C8D172FA1E8405230041DB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D172F91E8405230041DB54 /* Assets.xcassets */; };
 		C8D172FD1E8405230041DB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D172FB1E8405230041DB54 /* LaunchScreen.storyboard */; };
+		C8D1730A1E8413860041DB54 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D173091E8413860041DB54 /* HttpRequester.swift */; };
+		C8D1730C1E84369E0041DB54 /* HttpRequesterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D1730B1E84369E0041DB54 /* HttpRequesterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C8D172F91E8405230041DB54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D172FC1E8405230041DB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D172FE1E8405230041DB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8D173091E8413860041DB54 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
+		C8D1730B1E84369E0041DB54 /* HttpRequesterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequesterDelegate.swift; path = HttpRequests/HttpRequesterDelegate.swift; sourceTree = "<group>"; };
 		E482E842D1092DEDB79BB337 /* Pods_TV_Show_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TV_Show_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD797A5C4A0643D892C1CB3 /* Pods-TV Show Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV Show Calendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TV Show Calendar/Pods-TV Show Calendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +117,8 @@
 		C8D173061E8405520041DB54 /* HtttpRequests */ = {
 			isa = PBXGroup;
 			children = (
+				C8D173091E8413860041DB54 /* HttpRequester.swift */,
+				C8D1730B1E84369E0041DB54 /* HttpRequesterDelegate.swift */,
 			);
 			name = HtttpRequests;
 			sourceTree = "<group>";
@@ -255,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8D172F21E8405230041DB54 /* ViewController.swift in Sources */,
+				C8D1730C1E84369E0041DB54 /* HttpRequesterDelegate.swift in Sources */,
 				C8D172F81E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld in Sources */,
+				C8D1730A1E8413860041DB54 /* HttpRequester.swift in Sources */,
 				C8D172F01E8405230041DB54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +428,7 @@
 				C8D173031E8405230041DB54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
