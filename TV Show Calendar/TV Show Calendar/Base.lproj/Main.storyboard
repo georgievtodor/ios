@@ -28,7 +28,7 @@
         <!--Popular-->
         <scene sceneID="Dmw-sp-O87">
             <objects>
-                <collectionViewController title="Popular" id="rgP-rv-Uox" customClass="HomeCollectionViewController" customModule="TV_Show_Calendar" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="PopularTvShowsCVC" title="Popular" id="rgP-rv-Uox" customClass="HomeCollectionViewController" customModule="TV_Show_Calendar" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Jau-uX-Heh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,16 +45,16 @@
                             <outlet property="delegate" destination="rgP-rv-Uox" id="RUG-o9-M2W"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="KuN-Yp-FsA"/>
+                    <navigationItem key="navigationItem" title="Popular TV Shows" id="KuN-Yp-FsA"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcJ-EK-Mbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="208.80000000000001" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Tv Show View Controller-->
         <scene sceneID="IGB-yI-dv9">
             <objects>
-                <viewController id="iAY-Yk-m2E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TvShowVC" id="iAY-Yk-m2E" customClass="TvShowViewController" customModule="TV_Show_Calendar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="spe-zY-Qdl"/>
                         <viewControllerLayoutGuide type="bottom" id="Ij0-0g-LOP"/>
@@ -63,32 +63,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Wj-Jw-Amd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Wj-Jw-Amd">
                                 <rect key="frame" x="0.0" y="120" width="375" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRq-hP-Zcm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRq-hP-Zcm">
                                 <rect key="frame" x="0.0" y="64" width="375" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekl-oc-3Vy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekl-oc-3Vy">
                                 <rect key="frame" x="0.0" y="292" width="375" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Jt-GD-l9B">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Jt-GD-l9B">
                                 <rect key="frame" x="0.0" y="444" width="375" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebb-db-Srv">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebb-db-Srv">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
                                     <tabBarItem systemItem="favorites" id="T9K-ie-OQI"/>
@@ -97,7 +92,30 @@
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Jt-GD-l9B" firstAttribute="leading" secondItem="mFa-gg-GWB" secondAttribute="leading" id="2co-BJ-cum"/>
+                            <constraint firstItem="6Jt-GD-l9B" firstAttribute="top" secondItem="ekl-oc-3Vy" secondAttribute="bottom" constant="8" id="4RT-dl-O85"/>
+                            <constraint firstAttribute="trailing" secondItem="ekl-oc-3Vy" secondAttribute="trailing" id="72j-cJ-A4U"/>
+                            <constraint firstItem="3Wj-Jw-Amd" firstAttribute="leading" secondItem="mFa-gg-GWB" secondAttribute="leading" id="CRT-2W-XWT"/>
+                            <constraint firstItem="ebb-db-Srv" firstAttribute="leading" secondItem="mFa-gg-GWB" secondAttribute="leading" id="LeC-Lu-ezB"/>
+                            <constraint firstItem="ekl-oc-3Vy" firstAttribute="top" secondItem="3Wj-Jw-Amd" secondAttribute="bottom" id="Nb3-JE-DXU"/>
+                            <constraint firstItem="ekl-oc-3Vy" firstAttribute="leading" secondItem="mFa-gg-GWB" secondAttribute="leading" id="SMr-NJ-vYV"/>
+                            <constraint firstItem="xRq-hP-Zcm" firstAttribute="leading" secondItem="mFa-gg-GWB" secondAttribute="leading" id="TjG-ce-Zmf"/>
+                            <constraint firstItem="Ij0-0g-LOP" firstAttribute="top" secondItem="ebb-db-Srv" secondAttribute="bottom" id="aII-14-TUA"/>
+                            <constraint firstAttribute="trailing" secondItem="6Jt-GD-l9B" secondAttribute="trailing" id="bH1-iZ-EvK"/>
+                            <constraint firstAttribute="trailing" secondItem="3Wj-Jw-Amd" secondAttribute="trailing" id="cYe-MT-j2Z"/>
+                            <constraint firstItem="xRq-hP-Zcm" firstAttribute="top" secondItem="spe-zY-Qdl" secondAttribute="bottom" id="ckX-Qv-Z6D"/>
+                            <constraint firstAttribute="trailing" secondItem="ebb-db-Srv" secondAttribute="trailing" id="iwo-D0-qgA"/>
+                            <constraint firstItem="ebb-db-Srv" firstAttribute="top" secondItem="6Jt-GD-l9B" secondAttribute="bottom" id="mLn-pF-nRu"/>
+                            <constraint firstItem="3Wj-Jw-Amd" firstAttribute="top" secondItem="xRq-hP-Zcm" secondAttribute="bottom" constant="8" id="smO-jB-ukH"/>
+                            <constraint firstAttribute="trailing" secondItem="xRq-hP-Zcm" secondAttribute="trailing" id="wZO-y8-VFu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backDropImage" destination="3Wj-Jw-Amd" id="RiG-WJ-p7m"/>
+                        <outlet property="name" destination="xRq-hP-Zcm" id="pYy-Ns-Wde"/>
+                        <outlet property="tvShowDescription" destination="ekl-oc-3Vy" id="S1A-bm-QwG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xue-mC-tVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

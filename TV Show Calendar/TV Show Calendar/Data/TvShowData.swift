@@ -18,11 +18,12 @@ class TvShowData: TvShowDataDelegate {
                 serialJson in
                 let id = serialJson["id"].stringValue
                 let name = serialJson["name"].stringValue
+                let description = serialJson["overview"].stringValue
                 let rating = "\(serialJson["vote_average"].stringValue) / 10"
                 let imagePath = "\(TheMovieDbConstants.imageUrl)\(serialJson["poster_path"].stringValue)"
                 let backDropPath = "\(TheMovieDbConstants.imageUrl)\(serialJson["backdrop_path"].stringValue)"
                 
-                return TvShowModel(id: id, imagePath: imagePath, backDropPath: backDropPath, name: name, rating:
+                return TvShowModel(id: id, imagePath: imagePath, backDropPath: backDropPath, name: name, description: description, rating:
                     rating)
         }
             .filter { $0 != nil }
@@ -30,10 +31,16 @@ class TvShowData: TvShowDataDelegate {
     }
     
     
-//    func getTvShow(_ id: String) -> Observable<TvShowModelDelegate> {
-//
+  //  func getTvShow(_ id: String) -> Observable<TvShowModelDelegate> {
+ ///       return self.httpRequester.get(TheMovieDbConstants.getTvDetailsUrl(id))
+ //           .filter { $0.body != nil }
+ //           .flatMap { Observable.from(JSON($0.body!)["results"].arrayValue) }
+ //           .map {
+//                detailedTvShow in
+//                let id = detailedTvShow[
+//        }
 //    }
-//
+
 //    func getTvShowSeasonEpisodes(_ seasonNumber: String, _ tvShowId: String) -> Observable<SeasonModelDelegate> {
 //
 //    }

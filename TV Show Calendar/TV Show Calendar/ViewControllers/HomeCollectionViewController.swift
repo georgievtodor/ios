@@ -46,17 +46,29 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         return CGSize(width: width, height: height)
     }
     
-    /*
      // MARK: - Navigation
-     
+     /*
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
+    // Pass the selected object to the new view controller.
+        let rowIndex = sender as! Int
+        let nextView = segue.destination as! TvShowViewController
+        nextView.tvShow = tvShows[rowIndex]
+        
+        
      }
-     */
-    
+    */
     // MARK: UICollectionViewDataSource
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TvShowVC") as! TvShowViewController
+        
+        nextVC.tvShow = self.tvShows[indexPath.row]
+        
+        self.show(nextVC, sender: self)
+    }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
