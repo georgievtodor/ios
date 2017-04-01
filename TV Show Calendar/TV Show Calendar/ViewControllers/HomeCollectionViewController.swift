@@ -3,7 +3,7 @@ import RxSwift
 
 private let reuseIdentifier = "Cell"
 
-class HomeCollectionViewController: UICollectionViewController {
+class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     internal var tvShowData: TvShowDataDelegate?
     internal var tvShows = [TvShowModelDelegate]() {
@@ -37,6 +37,13 @@ class HomeCollectionViewController: UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width / 2.1
+        let height = collectionView.frame.height / 2.1
+        
+        return CGSize(width: width, height: height)
     }
     
     /*

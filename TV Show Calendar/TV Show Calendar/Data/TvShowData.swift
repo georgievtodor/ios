@@ -18,7 +18,7 @@ class TvShowData: TvShowDataDelegate {
                 serialJson in
                 let id = serialJson["id"].stringValue
                 let name = serialJson["name"].stringValue
-                let rating = serialJson["vote_average"].stringValue
+                let rating = "\(serialJson["vote_average"].stringValue) / 10"
                 let imagePath = "\(TheMovieDbConstants.imageUrl)\(serialJson["poster_path"].stringValue)"
                 let backDropPath = "\(TheMovieDbConstants.imageUrl)\(serialJson["backdrop_path"].stringValue)"
                 
