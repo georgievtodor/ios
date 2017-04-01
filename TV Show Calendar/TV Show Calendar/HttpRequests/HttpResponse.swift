@@ -1,6 +1,6 @@
 import Foundation
 
-class Response: ResponseDelegate {
+class HttpResponse: HttpResponseDelegate {
     public var body: [String: Any]?
     public var message: String?
     public var statusCode: Int?

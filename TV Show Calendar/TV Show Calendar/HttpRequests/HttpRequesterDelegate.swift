@@ -1,8 +1,8 @@
 import Foundation
 import RxSwift
 
-protocol RequesterDelegate {
-    func get(_ url: String) -> Observable<ResponseDelegate>
+protocol HttpRequesterDelegate {
+    func get(_ url: String) -> Observable<HttpResponseDelegate>
     
-    func post(_ url: String, params: [String: Any]) -> Observable<ResponseDelegate>
+    func post(_ url: String, params: [String: Any]) -> Observable<HttpResponseDelegate>
 }

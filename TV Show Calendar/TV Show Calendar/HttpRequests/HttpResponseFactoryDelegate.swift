@@ -1,5 +1,5 @@
 import Foundation
 
-protocol ResponseFactoryDelegate {
-    func createResponse() -> ResponseDelegate
+protocol HttpResponseFactoryDelegate {
+    func createResponse() -> HttpResponseDelegate
 }
