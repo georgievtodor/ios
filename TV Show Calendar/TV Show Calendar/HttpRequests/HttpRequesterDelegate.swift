@@ -1,25 +1,8 @@
-//
-//  HttpRequesterDelegate.swift
-//  TV Show Calendar
-//
-//  Created by Todor on 3/23/17.
-//  Copyright © 2017 Todor. All rights reserved.
-//
-
 import Foundation
+import RxSwift
 
-protocol HttpRequesterDelegate {
-    func dataReceived(data: Any)
+protocol RequesterDelegate {
+    func get(_ url: String) -> Observable<ResponseDelegate>
     
-    func errorReceived(error: Error)
-}
-
-extension HttpRequesterDelegate {
-    func dataReceived(data: Any) {
-        
-    }
-    
-    func errorReceived(error: Error) {
-        
-    }
+    func post(_ url: String, params: [String: Any]) -> Observable<ResponseDelegate>
 }
