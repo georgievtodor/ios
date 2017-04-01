@@ -1,18 +1,15 @@
-//
-//  SerialViewCell.swift
-//  TV Show Calendar
-//
-//  Created by Todor on 3/29/17.
-//  Copyright © 2017 Todor. All rights reserved.
-//
-
 import UIKit
 
 class SerialViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var tvShowImage: UIImageView!
+
+    @IBOutlet weak var tvShowName: UILabel!
+    
+    @IBOutlet weak var tvShowRating: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }
