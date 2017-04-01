@@ -11,7 +11,9 @@ target 'TV Show Calendar' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire', '~> 4.0'
-  pod 'SwiftyJSON', '~> 3.1'
+  pod 'SwiftyJSON','~> 3.1'
+  pod 'RxSwift',   '~> 3.0'
+  pod 'Kingfisher', '~> 3.0'
   swinject_pods
   # Pods for TV Show Calendar
   

@@ -67,6 +67,7 @@ class HomeCollectionViewController: UICollectionViewController {
         let tvShow = self.tvShows[indexPath.row]
         cell.tvShowRating.text = tvShow.rating
         cell.tvShowName.text = tvShow.name
+        cell.tvShowImage.setImageFromUrl(imageUrl: URL(string: tvShow.imagePath)!)
         
         // Configure the cell
         

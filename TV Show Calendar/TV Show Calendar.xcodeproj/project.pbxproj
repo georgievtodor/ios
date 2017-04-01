@@ -8,18 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		1E0229359EEBFC531CB16719 /* Pods_TV_Show_Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E482E842D1092DEDB79BB337 /* Pods_TV_Show_Calendar.framework */; };
+		C84CBE101E8C3BE0000393FB /* SerialViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CBE0E1E8C3BE0000393FB /* SerialViewCell.swift */; };
+		C84CBE111E8C3BE0000393FB /* SerialViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C84CBE0F1E8C3BE0000393FB /* SerialViewCell.xib */; };
+		C88EDF161E8F38DA00B7318F /* HttpResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF141E8F38DA00B7318F /* HttpResponseDelegate.swift */; };
+		C88EDF171E8F38DA00B7318F /* HttpResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF151E8F38DA00B7318F /* HttpResponseFactory.swift */; };
+		C88EDF1A1E8F394A00B7318F /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF181E8F394A00B7318F /* ApiConstants.swift */; };
+		C88EDF1B1E8F394A00B7318F /* TheMovieDbConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF191E8F394A00B7318F /* TheMovieDbConstants.swift */; };
+		C88EDF1D1E8FD96700B7318F /* UIImageView+ImageFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF1C1E8FD96700B7318F /* UIImageView+ImageFromUrl.swift */; };
+		C8970DDD1E8DC00600908100 /* TvShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DDC1E8DC00600908100 /* TvShowModel.swift */; };
+		C8970DDF1E8DC01F00908100 /* EpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DDE1E8DC01F00908100 /* EpisodeModel.swift */; };
+		C8970DE11E8DC05700908100 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DE01E8DC05700908100 /* HttpRequester.swift */; };
+		C8970DE31E8DC06B00908100 /* HttpRequesterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DE21E8DC06B00908100 /* HttpRequesterDelegate.swift */; };
+		C8970DE51E8DC09300908100 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DE41E8DC09300908100 /* HttpResponse.swift */; };
+		C8970DEB1E8DC10C00908100 /* HttpResponseFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DEA1E8DC10C00908100 /* HttpResponseFactoryDelegate.swift */; };
+		C8970DED1E8DCAB600908100 /* TvShowModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DEC1E8DCAB600908100 /* TvShowModelDelegate.swift */; };
+		C8970DEF1E8DCAC400908100 /* EpisodeModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DEE1E8DCAC400908100 /* EpisodeModelDelegate.swift */; };
+		C8970DF11E8DCC9000908100 /* TvShowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DF01E8DCC9000908100 /* TvShowData.swift */; };
+		C8970DF31E8DCC9E00908100 /* TvShowDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DF21E8DCC9E00908100 /* TvShowDataDelegate.swift */; };
+		C8970DF51E8DCF1C00908100 /* SeasonModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DF41E8DCF1C00908100 /* SeasonModelDelegate.swift */; };
+		C8970DF71E8DCF2700908100 /* SeasonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DF61E8DCF2700908100 /* SeasonModel.swift */; };
 		C8D172F01E8405230041DB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D172EF1E8405230041DB54 /* AppDelegate.swift */; };
 		C8D172F51E8405230041DB54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D172F31E8405230041DB54 /* Main.storyboard */; };
 		C8D172F81E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8D172F61E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld */; };
 		C8D172FA1E8405230041DB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D172F91E8405230041DB54 /* Assets.xcassets */; };
 		C8D172FD1E8405230041DB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D172FB1E8405230041DB54 /* LaunchScreen.storyboard */; };
-		C8D1730A1E8413860041DB54 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D173091E8413860041DB54 /* HttpRequester.swift */; };
-		C8D1730C1E84369E0041DB54 /* HttpRequesterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D1730B1E84369E0041DB54 /* HttpRequesterDelegate.swift */; };
 		C8D1730E1E8455710041DB54 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D1730D1E8455710041DB54 /* HomeCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31DEE6EF6DDD71408F615F18 /* Pods-TV Show Calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV Show Calendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TV Show Calendar/Pods-TV Show Calendar.debug.xcconfig"; sourceTree = "<group>"; };
+		C84CBE0E1E8C3BE0000393FB /* SerialViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SerialViewCell.swift; path = Views/SerialViewCell.swift; sourceTree = "<group>"; };
+		C84CBE0F1E8C3BE0000393FB /* SerialViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SerialViewCell.xib; path = Views/SerialViewCell.xib; sourceTree = "<group>"; };
+		C88EDF141E8F38DA00B7318F /* HttpResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpResponseDelegate.swift; path = HttpRequests/HttpResponseDelegate.swift; sourceTree = "<group>"; };
+		C88EDF151E8F38DA00B7318F /* HttpResponseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpResponseFactory.swift; path = HttpRequests/HttpResponseFactory.swift; sourceTree = "<group>"; };
+		C88EDF181E8F394A00B7318F /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiConstants.swift; path = Constants/ApiConstants.swift; sourceTree = "<group>"; };
+		C88EDF191E8F394A00B7318F /* TheMovieDbConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheMovieDbConstants.swift; path = Constants/TheMovieDbConstants.swift; sourceTree = "<group>"; };
+		C88EDF1C1E8FD96700B7318F /* UIImageView+ImageFromUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+ImageFromUrl.swift"; path = "Extensions/UIImageView+ImageFromUrl.swift"; sourceTree = "<group>"; };
+		C8970DDC1E8DC00600908100 /* TvShowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TvShowModel.swift; path = Models/TvShowModel.swift; sourceTree = "<group>"; };
+		C8970DDE1E8DC01F00908100 /* EpisodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EpisodeModel.swift; path = Models/EpisodeModel.swift; sourceTree = "<group>"; };
+		C8970DE01E8DC05700908100 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequester.swift; path = HttpRequests/HttpRequester.swift; sourceTree = "<group>"; };
+		C8970DE21E8DC06B00908100 /* HttpRequesterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequesterDelegate.swift; path = HttpRequests/HttpRequesterDelegate.swift; sourceTree = "<group>"; };
+		C8970DE41E8DC09300908100 /* HttpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpResponse.swift; path = HttpRequests/HttpResponse.swift; sourceTree = "<group>"; };
+		C8970DEA1E8DC10C00908100 /* HttpResponseFactoryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpResponseFactoryDelegate.swift; path = HttpRequests/HttpResponseFactoryDelegate.swift; sourceTree = "<group>"; };
+		C8970DEC1E8DCAB600908100 /* TvShowModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TvShowModelDelegate.swift; path = Models/TvShowModelDelegate.swift; sourceTree = "<group>"; };
+		C8970DEE1E8DCAC400908100 /* EpisodeModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EpisodeModelDelegate.swift; path = Models/EpisodeModelDelegate.swift; sourceTree = "<group>"; };
+		C8970DF01E8DCC9000908100 /* TvShowData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TvShowData.swift; path = Data/TvShowData.swift; sourceTree = "<group>"; };
+		C8970DF21E8DCC9E00908100 /* TvShowDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TvShowDataDelegate.swift; path = Data/TvShowDataDelegate.swift; sourceTree = "<group>"; };
+		C8970DF41E8DCF1C00908100 /* SeasonModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonModelDelegate.swift; path = Models/SeasonModelDelegate.swift; sourceTree = "<group>"; };
+		C8970DF61E8DCF2700908100 /* SeasonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonModel.swift; path = Models/SeasonModel.swift; sourceTree = "<group>"; };
 		C8D172EC1E8405230041DB54 /* TV Show Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TV Show Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D172EF1E8405230041DB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D172F41E8405230041DB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,8 +63,6 @@
 		C8D172F91E8405230041DB54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D172FC1E8405230041DB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D172FE1E8405230041DB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8D173091E8413860041DB54 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
-		C8D1730B1E84369E0041DB54 /* HttpRequesterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequesterDelegate.swift; path = HttpRequests/HttpRequesterDelegate.swift; sourceTree = "<group>"; };
 		C8D1730D1E8455710041DB54 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCollectionViewController.swift; path = ViewControllers/HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		E482E842D1092DEDB79BB337 /* Pods_TV_Show_Calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TV_Show_Calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD797A5C4A0643D892C1CB3 /* Pods-TV Show Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV Show Calendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TV Show Calendar/Pods-TV Show Calendar.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +97,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C84CBE0D1E8C3B9E000393FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C84CBE0E1E8C3BE0000393FB /* SerialViewCell.swift */,
+				C84CBE0F1E8C3BE0000393FB /* SerialViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C8970DD71E8D390B00908100 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C88EDF181E8F394A00B7318F /* ApiConstants.swift */,
+				C88EDF191E8F394A00B7318F /* TheMovieDbConstants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		C8D172E31E8405220041DB54 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +136,8 @@
 		C8D172EE1E8405230041DB54 /* TV Show Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				C8970DD71E8D390B00908100 /* Constants */,
+				C84CBE0D1E8C3B9E000393FB /* Views */,
 				C8D173081E8405650041DB54 /* Data */,
 				C8D173071E84055F0041DB54 /* Models */,
 				C8D173061E8405520041DB54 /* HtttpRequests */,
@@ -102,6 +156,7 @@
 		C8D173041E84053F0041DB54 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C88EDF1C1E8FD96700B7318F /* UIImageView+ImageFromUrl.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -117,8 +172,12 @@
 		C8D173061E8405520041DB54 /* HtttpRequests */ = {
 			isa = PBXGroup;
 			children = (
-				C8D173091E8413860041DB54 /* HttpRequester.swift */,
-				C8D1730B1E84369E0041DB54 /* HttpRequesterDelegate.swift */,
+				C88EDF141E8F38DA00B7318F /* HttpResponseDelegate.swift */,
+				C88EDF151E8F38DA00B7318F /* HttpResponseFactory.swift */,
+				C8970DE01E8DC05700908100 /* HttpRequester.swift */,
+				C8970DE21E8DC06B00908100 /* HttpRequesterDelegate.swift */,
+				C8970DE41E8DC09300908100 /* HttpResponse.swift */,
+				C8970DEA1E8DC10C00908100 /* HttpResponseFactoryDelegate.swift */,
 			);
 			name = HtttpRequests;
 			sourceTree = "<group>";
@@ -126,6 +185,12 @@
 		C8D173071E84055F0041DB54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C8970DDC1E8DC00600908100 /* TvShowModel.swift */,
+				C8970DDE1E8DC01F00908100 /* EpisodeModel.swift */,
+				C8970DEC1E8DCAB600908100 /* TvShowModelDelegate.swift */,
+				C8970DEE1E8DCAC400908100 /* EpisodeModelDelegate.swift */,
+				C8970DF41E8DCF1C00908100 /* SeasonModelDelegate.swift */,
+				C8970DF61E8DCF2700908100 /* SeasonModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -133,6 +198,8 @@
 		C8D173081E8405650041DB54 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C8970DF01E8DCC9000908100 /* TvShowData.swift */,
+				C8970DF21E8DCC9E00908100 /* TvShowDataDelegate.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -201,6 +268,7 @@
 			files = (
 				C8D172FD1E8405230041DB54 /* LaunchScreen.storyboard in Resources */,
 				C8D172FA1E8405230041DB54 /* Assets.xcassets in Resources */,
+				C84CBE111E8C3BE0000393FB /* SerialViewCell.xib in Resources */,
 				C8D172F51E8405230041DB54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,11 +328,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8D1730C1E84369E0041DB54 /* HttpRequesterDelegate.swift in Sources */,
+				C84CBE101E8C3BE0000393FB /* SerialViewCell.swift in Sources */,
 				C8D172F81E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld in Sources */,
-				C8D1730A1E8413860041DB54 /* HttpRequester.swift in Sources */,
+				C88EDF1A1E8F394A00B7318F /* ApiConstants.swift in Sources */,
+				C88EDF1D1E8FD96700B7318F /* UIImageView+ImageFromUrl.swift in Sources */,
+				C8970DE51E8DC09300908100 /* HttpResponse.swift in Sources */,
+				C8970DF31E8DCC9E00908100 /* TvShowDataDelegate.swift in Sources */,
+				C8970DDD1E8DC00600908100 /* TvShowModel.swift in Sources */,
+				C8970DF11E8DCC9000908100 /* TvShowData.swift in Sources */,
+				C88EDF171E8F38DA00B7318F /* HttpResponseFactory.swift in Sources */,
+				C88EDF1B1E8F394A00B7318F /* TheMovieDbConstants.swift in Sources */,
+				C8970DED1E8DCAB600908100 /* TvShowModelDelegate.swift in Sources */,
+				C8970DF71E8DCF2700908100 /* SeasonModel.swift in Sources */,
+				C8970DE31E8DC06B00908100 /* HttpRequesterDelegate.swift in Sources */,
+				C8970DF51E8DCF1C00908100 /* SeasonModelDelegate.swift in Sources */,
 				C8D1730E1E8455710041DB54 /* HomeCollectionViewController.swift in Sources */,
+				C88EDF161E8F38DA00B7318F /* HttpResponseDelegate.swift in Sources */,
+				C8970DEF1E8DCAC400908100 /* EpisodeModelDelegate.swift in Sources */,
+				C8970DEB1E8DC10C00908100 /* HttpResponseFactoryDelegate.swift in Sources */,
 				C8D172F01E8405230041DB54 /* AppDelegate.swift in Sources */,
+				C8970DDF1E8DC01F00908100 /* EpisodeModel.swift in Sources */,
+				C8970DE11E8DC05700908100 /* HttpRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
