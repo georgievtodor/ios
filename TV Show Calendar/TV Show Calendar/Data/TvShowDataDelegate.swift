@@ -8,5 +8,5 @@ protocol TvShowDataDelegate {
     
         func getTvShowSeasonEpisodes(_ seasonNumber: String, _ tvShowId: String) -> Observable<EpisodeModelDelegate>
     
-        
+        func searchTvShow(_ query: String) -> Observable<TvShowModelDelegate>
 }

@@ -6,7 +6,7 @@ public final class TheMovieDbConstants {
     public static let imageUrl: String = "https://image.tmdb.org/t/p/w640"
     
     
-    func getSearchTvShowUrl(queryString query: String) -> String {
+    static func getSearchTvShowUrl(queryString query: String) -> String {
         return "\(TheMovieDbConstants.tMDBApiUrl)/search/tv\(TheMovieDbConstants.tMDBApiKey)&language=en-US&query=\(query)&page=1"
     }
     

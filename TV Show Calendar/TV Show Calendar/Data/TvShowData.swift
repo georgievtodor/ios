@@ -69,5 +69,27 @@ class TvShowData: TvShowDataDelegate {
             .filter { $0 != nil }
             .map { $0! }
     }
+    
+    func searchTvShow(_ query: String) -> Observable<TvShowModelDelegate> {
+        let url = TheMovieDbConstants.getSearchTvShowUrl(queryString: query)
+        
+        return self.httpRequester.get(url)
+            .flatMap { Observable.from(JSON($0.body!)["results"].arrayValue) }
+            .map {
+                serialJson in
+                let id = serialJson["id"].stringValue
+                let name = serialJson["name"].stringValue
+                let description = serialJson["overview"].stringValue
+                let rating = "\(serialJson["vote_average"].stringValue) / 10"
+                let imagePath = "\(TheMovieDbConstants.imageUrl)\(serialJson["poster_path"].stringValue)"
+                let backDropPath = "\(TheMovieDbConstants.imageUrl)\(serialJson["backdrop_path"].stringValue)"
+                
+                return TvShowModel(id: id, imagePath: imagePath, backDropPath: backDropPath, name: name, description: description, rating:
+                    rating)
+            }
+            .filter { $0 != nil }
+            .map { $0! }
+    }
+    
 }
 

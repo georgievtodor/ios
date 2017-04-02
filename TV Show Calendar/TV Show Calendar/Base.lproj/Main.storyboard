@@ -19,12 +19,32 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="rgP-rv-Uox" kind="relationship" relationship="rootViewController" id="L8S-Qm-plv"/>
+                        <segue destination="Bxx-2d-YB0" kind="relationship" relationship="rootViewController" id="5uk-tJ-KUb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDh-pX-g3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-598" y="124"/>
+            <point key="canvasLocation" x="-2215" y="125"/>
+        </scene>
+        <!--Feautured-->
+        <scene sceneID="Khv-lQ-isR">
+            <objects>
+                <tabBarController title="Feautured" id="Bxx-2d-YB0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mLc-Ai-Rmd"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Hyc-fI-U9v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rgP-rv-Uox" kind="relationship" relationship="viewControllers" id="EbI-CT-m5s"/>
+                        <segue destination="k1J-KT-GzC" kind="relationship" relationship="viewControllers" id="AKd-k5-IxX"/>
+                        <segue destination="wor-cC-tpT" kind="relationship" relationship="viewControllers" id="jGh-Bw-4bC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6N8-HC-6Sd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1454" y="133"/>
         </scene>
         <!--Popular-->
         <scene sceneID="Dmw-sp-O87">
@@ -46,11 +66,12 @@
                             <outlet property="delegate" destination="rgP-rv-Uox" id="RUG-o9-M2W"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="M0h-9C-ZRk"/>
                     <navigationItem key="navigationItem" title="Popular TV Shows" id="KuN-Yp-FsA"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcJ-EK-Mbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.80000000000001" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-458" y="133"/>
         </scene>
         <!--Tv Show View Controller-->
         <scene sceneID="IGB-yI-dv9">
@@ -139,7 +160,7 @@
             </objects>
             <point key="canvasLocation" x="1000.8" y="123.23838080959521"/>
         </scene>
-        <!--View Controller-->
+        <!--Account-->
         <scene sceneID="fep-HD-zKP">
             <objects>
                 <viewController id="k1J-KT-GzC" sceneMemberID="viewController">
@@ -152,13 +173,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Pk-gw-MSJ">
-                                <rect key="frame" x="16" y="161" width="343" height="30"/>
+                                <rect key="frame" x="16" y="205" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTj-8B-bku">
-                                <rect key="frame" x="16" y="108" width="343" height="30"/>
+                                <rect key="frame" x="16" y="152" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -191,10 +212,69 @@
                             <constraint firstItem="AY1-bK-Adu" firstAttribute="top" secondItem="1Pk-gw-MSJ" secondAttribute="bottom" constant="18" id="xzh-wy-nHc"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="User-32" id="SXL-8m-Gn2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhI-AB-ceU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709.5999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-1455" y="866"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="noq-iK-w54">
+            <objects>
+                <viewController id="wor-cC-tpT" customClass="SearchViewController" customModule="TV_Show_Calendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AqT-u0-RDQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gyK-yb-2Dx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xPE-5R-XWR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="b7t-K4-HcG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5GV-v4-7af">
+                                <rect key="frame" x="0.0" y="108" width="375" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Sw-RQ-dM6">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gyK-yb-2Dx" firstAttribute="top" secondItem="5GV-v4-7af" secondAttribute="bottom" constant="8" id="04e-kq-EN4"/>
+                            <constraint firstItem="5GV-v4-7af" firstAttribute="top" secondItem="b7t-K4-HcG" secondAttribute="bottom" id="88g-k7-J1a"/>
+                            <constraint firstItem="b7t-K4-HcG" firstAttribute="top" secondItem="AqT-u0-RDQ" secondAttribute="bottom" id="AZ7-Ai-zid"/>
+                            <constraint firstItem="b7t-K4-HcG" firstAttribute="top" secondItem="AqT-u0-RDQ" secondAttribute="bottom" id="FBP-tY-FDZ"/>
+                            <constraint firstItem="gyK-yb-2Dx" firstAttribute="top" secondItem="5GV-v4-7af" secondAttribute="bottom" constant="8" id="J0A-gY-7jf"/>
+                            <constraint firstItem="b7t-K4-HcG" firstAttribute="leading" secondItem="xPE-5R-XWR" secondAttribute="leading" id="KXb-qz-Cfc"/>
+                            <constraint firstItem="5GV-v4-7af" firstAttribute="leading" secondItem="xPE-5R-XWR" secondAttribute="leading" id="c5F-zr-2Ab"/>
+                            <constraint firstItem="5GV-v4-7af" firstAttribute="leading" secondItem="xPE-5R-XWR" secondAttribute="leading" id="fni-T9-xqI"/>
+                            <constraint firstAttribute="trailing" secondItem="5GV-v4-7af" secondAttribute="trailing" id="h2b-d4-NCx"/>
+                            <constraint firstAttribute="trailing" secondItem="5GV-v4-7af" secondAttribute="trailing" id="iFV-fG-2c5"/>
+                            <constraint firstItem="5GV-v4-7af" firstAttribute="top" secondItem="b7t-K4-HcG" secondAttribute="bottom" id="io6-r7-Xyb"/>
+                            <constraint firstItem="5GV-v4-7af" firstAttribute="top" secondItem="b7t-K4-HcG" secondAttribute="bottom" id="kV1-ys-tko"/>
+                            <constraint firstAttribute="trailing" secondItem="b7t-K4-HcG" secondAttribute="trailing" id="nTX-fn-mgg"/>
+                            <constraint firstAttribute="trailing" secondItem="b7t-K4-HcG" secondAttribute="trailing" id="nuB-ee-u3A"/>
+                            <constraint firstItem="b7t-K4-HcG" firstAttribute="leading" secondItem="xPE-5R-XWR" secondAttribute="leading" id="pFn-8d-Ybb"/>
+                            <constraint firstItem="5GV-v4-7af" firstAttribute="top" secondItem="b7t-K4-HcG" secondAttribute="bottom" id="pj5-uZ-Shr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="aCE-kN-YAX"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5GV-v4-7af" id="lBh-mH-eUC"/>
+                        <outlet property="searchBar" destination="b7t-K4-HcG" id="0Bs-N7-aD3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXe-3z-hyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-545" y="866"/>
         </scene>
         <!--Episodes Table View Controller-->
         <scene sceneID="UK8-Yg-IaR">
@@ -222,7 +302,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRJ-C7-C3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="125"/>
+            <point key="canvasLocation" x="1892" y="125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="User-32" width="32" height="32"/>
+    </resources>
 </document>
