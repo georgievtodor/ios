@@ -63,7 +63,7 @@ class TvShowViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = seasonsTableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.textLabel?.text = seasons[indexPath.row + 1].seasonNumber
+        cell.textLabel?.text = "Season \(seasons[indexPath.row + 1].seasonNumber)"
         return cell
     }
     
