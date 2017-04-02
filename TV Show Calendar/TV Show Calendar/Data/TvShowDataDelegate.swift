@@ -6,7 +6,7 @@ protocol TvShowDataDelegate {
     
         func getTvShow(_ id: String) -> Observable<SeasonModelDelegate>
     
-    //    func getTvShowSeasonEpisodes(_ seasonNumber: String, _ tvShowId: String) -> Observable<SeasonModelDelegate>
-    //
-    //    
+        func getTvShowSeasonEpisodes(_ seasonNumber: String, _ tvShowId: String) -> Observable<EpisodeModelDelegate>
+    
+        
 }

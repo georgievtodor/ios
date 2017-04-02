@@ -18,7 +18,9 @@
 		C88EDF211E902FE300B7318F /* TvShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF201E902FE300B7318F /* TvShowViewController.swift */; };
 		C88EDF231E903A2F00B7318F /* DetailedTvShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF221E903A2F00B7318F /* DetailedTvShowModel.swift */; };
 		C88EDF251E903A3E00B7318F /* DetailedTvShowModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF241E903A3E00B7318F /* DetailedTvShowModelDelegate.swift */; };
-		C88EDF2D1E90681F00B7318F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF2C1E90681F00B7318F /* TableViewController.swift */; };
+		C892AF471E91222B007B2828 /* EpisodeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C892AF451E91222B007B2828 /* EpisodeViewCell.swift */; };
+		C892AF481E91222B007B2828 /* EpisodeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C892AF461E91222B007B2828 /* EpisodeViewCell.xib */; };
+		C892AF4A1E912362007B2828 /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C892AF491E912362007B2828 /* EpisodesTableViewController.swift */; };
 		C8970DDD1E8DC00600908100 /* TvShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DDC1E8DC00600908100 /* TvShowModel.swift */; };
 		C8970DDF1E8DC01F00908100 /* EpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DDE1E8DC01F00908100 /* EpisodeModel.swift */; };
 		C8970DE11E8DC05700908100 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DE01E8DC05700908100 /* HttpRequester.swift */; };
@@ -51,7 +53,9 @@
 		C88EDF201E902FE300B7318F /* TvShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TvShowViewController.swift; path = ViewControllers/TvShowViewController.swift; sourceTree = "<group>"; };
 		C88EDF221E903A2F00B7318F /* DetailedTvShowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedTvShowModel.swift; path = Models/DetailedTvShowModel.swift; sourceTree = "<group>"; };
 		C88EDF241E903A3E00B7318F /* DetailedTvShowModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedTvShowModelDelegate.swift; path = Models/DetailedTvShowModelDelegate.swift; sourceTree = "<group>"; };
-		C88EDF2C1E90681F00B7318F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ViewControllers/TableViewController.swift; sourceTree = "<group>"; };
+		C892AF451E91222B007B2828 /* EpisodeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EpisodeViewCell.swift; path = Views/EpisodeViewCell.swift; sourceTree = "<group>"; };
+		C892AF461E91222B007B2828 /* EpisodeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EpisodeViewCell.xib; path = Views/EpisodeViewCell.xib; sourceTree = "<group>"; };
+		C892AF491E912362007B2828 /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EpisodesTableViewController.swift; path = ViewControllers/EpisodesTableViewController.swift; sourceTree = "<group>"; };
 		C8970DDC1E8DC00600908100 /* TvShowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TvShowModel.swift; path = Models/TvShowModel.swift; sourceTree = "<group>"; };
 		C8970DDE1E8DC01F00908100 /* EpisodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EpisodeModel.swift; path = Models/EpisodeModel.swift; sourceTree = "<group>"; };
 		C8970DE01E8DC05700908100 /* HttpRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequester.swift; path = HttpRequests/HttpRequester.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			children = (
 				C84CBE0E1E8C3BE0000393FB /* SerialViewCell.swift */,
 				C84CBE0F1E8C3BE0000393FB /* SerialViewCell.xib */,
+				C892AF451E91222B007B2828 /* EpisodeViewCell.swift */,
+				C892AF461E91222B007B2828 /* EpisodeViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -174,7 +180,7 @@
 			children = (
 				C8D1730D1E8455710041DB54 /* HomeCollectionViewController.swift */,
 				C88EDF201E902FE300B7318F /* TvShowViewController.swift */,
-				C88EDF2C1E90681F00B7318F /* TableViewController.swift */,
+				C892AF491E912362007B2828 /* EpisodesTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			files = (
 				C8D172FD1E8405230041DB54 /* LaunchScreen.storyboard in Resources */,
 				C8D172FA1E8405230041DB54 /* Assets.xcassets in Resources */,
+				C892AF481E91222B007B2828 /* EpisodeViewCell.xib in Resources */,
 				C84CBE111E8C3BE0000393FB /* SerialViewCell.xib in Resources */,
 				C8D172F51E8405230041DB54 /* Main.storyboard in Resources */,
 			);
@@ -347,6 +354,7 @@
 				C88EDF1D1E8FD96700B7318F /* UIImageView+ImageFromUrl.swift in Sources */,
 				C8970DE51E8DC09300908100 /* HttpResponse.swift in Sources */,
 				C8970DF31E8DCC9E00908100 /* TvShowDataDelegate.swift in Sources */,
+				C892AF4A1E912362007B2828 /* EpisodesTableViewController.swift in Sources */,
 				C8970DDD1E8DC00600908100 /* TvShowModel.swift in Sources */,
 				C8970DF11E8DCC9000908100 /* TvShowData.swift in Sources */,
 				C88EDF171E8F38DA00B7318F /* HttpResponseFactory.swift in Sources */,
@@ -362,8 +370,8 @@
 				C8970DEF1E8DCAC400908100 /* EpisodeModelDelegate.swift in Sources */,
 				C8970DEB1E8DC10C00908100 /* HttpResponseFactoryDelegate.swift in Sources */,
 				C8D172F01E8405230041DB54 /* AppDelegate.swift in Sources */,
+				C892AF471E91222B007B2828 /* EpisodeViewCell.swift in Sources */,
 				C8970DDF1E8DC01F00908100 /* EpisodeModel.swift in Sources */,
-				C88EDF2D1E90681F00B7318F /* TableViewController.swift in Sources */,
 				C8970DE11E8DC05700908100 /* HttpRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

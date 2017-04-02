@@ -52,8 +52,22 @@ class TvShowData: TvShowDataDelegate {
         
     }
     
-    //    func getTvShowSeasonEpisodes(_ seasonNumber: String, _ tvShowId: String) -> Observable<SeasonModelDelegate> {
-    //
-    //    }
+    func getTvShowSeasonEpisodes(_ seasonNumber: String, _ tvShowId: String) -> Observable<EpisodeModelDelegate> {
+        let url = TheMovieDbConstants.getSeasonDetailsUrl(serialId: tvShowId, seasonNumber)
+        
+        return self.httpRequester.get(url)
+            .filter { $0.body != nil }
+            .flatMap { Observable.from(JSON($0.body!)["episodes"].arrayValue) }
+            .map {
+                episodes in
+                let episodeNumber = episodes["episode_number"].stringValue
+                let episodeName = episodes["name"].stringValue
+                let airDate = episodes["air_date"].stringValue
+                
+                return EpisodeModel(name: episodeName, episodeNumber: episodeNumber, airDate: airDate)
+            }
+            .filter { $0 != nil }
+            .map { $0! }
+    }
 }
 

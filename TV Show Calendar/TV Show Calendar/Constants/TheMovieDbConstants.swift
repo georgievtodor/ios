@@ -15,7 +15,7 @@ public final class TheMovieDbConstants {
         return url
     }
     
-    func getSeasonDetailsUrl(serialId id: String, _ seasonNumber: Int) -> String {
+    static func getSeasonDetailsUrl(serialId id: String, _ seasonNumber: String) -> String {
         return "\(TheMovieDbConstants.tvShowsBaseUrl)/\(id)/season/\(seasonNumber)\(TheMovieDbConstants.tMDBApiKey)"
     }
     
