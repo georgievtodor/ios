@@ -7,12 +7,14 @@ class TvShowViewController: UIViewController, UITableViewDataSource, UITableView
     internal var tvShowData: TvShowDataDelegate?
     internal let disposeBag = DisposeBag()
     internal let reuseIdentifier = "SeasonCell"
+    internal var localData: LocalData?
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var backDropImage: UIImageView!
     @IBOutlet weak var tvShowDescription: UILabel!
     @IBOutlet weak var seasonsTableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var followButton: UIButton!
     
     internal var seasons = [SeasonModelDelegate]() {
         didSet {
@@ -34,6 +36,7 @@ class TvShowViewController: UIViewController, UITableViewDataSource, UITableView
         seasonsTableView.dataSource = self
         
         self.tvShowData = TvShowData()
+        self.localData = LocalData()
         
         tvShowData?.getTvShow((tvShow?.id)!).subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
             .observeOn(MainScheduler.instance)
@@ -44,6 +47,11 @@ class TvShowViewController: UIViewController, UITableViewDataSource, UITableView
             })
             .disposed(by: disposeBag)
         
+    }
+    
+    @IBAction func follow(_ sender: Any) {
+        localData?.save(tvShow: tvShow!)
+        followButton.titleLabel?.text = "Unfollow"
     }
     
     override func didReceiveMemoryWarning() {

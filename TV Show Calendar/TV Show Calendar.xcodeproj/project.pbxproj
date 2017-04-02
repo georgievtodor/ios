@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E0229359EEBFC531CB16719 /* Pods_TV_Show_Calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E482E842D1092DEDB79BB337 /* Pods_TV_Show_Calendar.framework */; };
+		C83E29DD1E9182BA00D517EA /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E29DC1E9182BA00D517EA /* LocalData.swift */; };
+		C83E29E31E91937C00D517EA /* FollowingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E29E21E91937C00D517EA /* FollowingTableViewController.swift */; };
 		C84CBE101E8C3BE0000393FB /* SerialViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CBE0E1E8C3BE0000393FB /* SerialViewCell.swift */; };
 		C84CBE111E8C3BE0000393FB /* SerialViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C84CBE0F1E8C3BE0000393FB /* SerialViewCell.xib */; };
 		C88EDF161E8F38DA00B7318F /* HttpResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88EDF141E8F38DA00B7318F /* HttpResponseDelegate.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		31DEE6EF6DDD71408F615F18 /* Pods-TV Show Calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV Show Calendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TV Show Calendar/Pods-TV Show Calendar.debug.xcconfig"; sourceTree = "<group>"; };
+		C83E29DC1E9182BA00D517EA /* LocalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalData.swift; path = Data/LocalData.swift; sourceTree = "<group>"; };
+		C83E29E21E91937C00D517EA /* FollowingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowingTableViewController.swift; path = ViewControllers/FollowingTableViewController.swift; sourceTree = "<group>"; };
 		C84CBE0E1E8C3BE0000393FB /* SerialViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SerialViewCell.swift; path = Views/SerialViewCell.swift; sourceTree = "<group>"; };
 		C84CBE0F1E8C3BE0000393FB /* SerialViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SerialViewCell.xib; path = Views/SerialViewCell.xib; sourceTree = "<group>"; };
 		C88EDF141E8F38DA00B7318F /* HttpResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpResponseDelegate.swift; path = HttpRequests/HttpResponseDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				C88EDF201E902FE300B7318F /* TvShowViewController.swift */,
 				C892AF491E912362007B2828 /* EpisodesTableViewController.swift */,
 				C8B59AA51E91464D0002B2BA /* SearchViewController.swift */,
+				C83E29E21E91937C00D517EA /* FollowingTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			children = (
 				C8970DF01E8DCC9000908100 /* TvShowData.swift */,
 				C8970DF21E8DCC9E00908100 /* TvShowDataDelegate.swift */,
+				C83E29DC1E9182BA00D517EA /* LocalData.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 				C84CBE101E8C3BE0000393FB /* SerialViewCell.swift in Sources */,
 				C8D172F81E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld in Sources */,
 				C88EDF1A1E8F394A00B7318F /* ApiConstants.swift in Sources */,
+				C83E29E31E91937C00D517EA /* FollowingTableViewController.swift in Sources */,
 				C8B59AA61E91464D0002B2BA /* SearchViewController.swift in Sources */,
 				C88EDF231E903A2F00B7318F /* DetailedTvShowModel.swift in Sources */,
 				C88EDF1D1E8FD96700B7318F /* UIImageView+ImageFromUrl.swift in Sources */,
@@ -377,6 +384,7 @@
 				C892AF471E91222B007B2828 /* EpisodeViewCell.swift in Sources */,
 				C8970DDF1E8DC01F00908100 /* EpisodeModel.swift in Sources */,
 				C8970DE11E8DC05700908100 /* HttpRequester.swift in Sources */,
+				C83E29DD1E9182BA00D517EA /* LocalData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

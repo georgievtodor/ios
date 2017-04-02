@@ -5,4 +5,5 @@ struct TvShowModel: TvShowModelDelegate {
     public var name: String
     public var description: String?
     public var rating: String?
+    
 }
