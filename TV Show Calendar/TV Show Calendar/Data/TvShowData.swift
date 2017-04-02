@@ -9,9 +9,17 @@ class TvShowData: TvShowDataDelegate {
         self.httpRequester = HttpRequester()
     }
     
-    func getTopTvShows() -> Observable<TvShowModelDelegate> {
+    func getTvShowsArray(stringQuery query: String?) -> Observable<TvShowModelDelegate> {
+        var url: String?
         
-        return self.httpRequester.get(TheMovieDbConstants.popularTvShows)
+        if(query != nil) {
+            url = TheMovieDbConstants.getSearchTvShowUrl(queryString: query!)
+        } else {
+            url = TheMovieDbConstants.popularTvShows
+            
+        }
+        
+        return self.httpRequester.get(url!)
             .filter { $0.body != nil }
             .flatMap { Observable.from(JSON($0.body!)["results"].arrayValue) }
             .map {

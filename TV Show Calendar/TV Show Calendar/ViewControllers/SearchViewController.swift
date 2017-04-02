@@ -36,7 +36,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
             handle = setTimeout(delay: 1, block: {
             self.tvShows = [TvShowModelDelegate]()
             
-            self.tvShowData?.searchTvShow(query!.replacingOccurrences(of: " ", with: "%20"))
+            self.tvShowData?.getTvShowsArray(stringQuery: query!.replacingOccurrences(of: " ", with: "%20"))
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: {

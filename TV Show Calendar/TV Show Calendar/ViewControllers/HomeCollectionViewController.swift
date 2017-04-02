@@ -25,7 +25,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         // Do any additional setup after loading the view.
 
         self.tvShowData = TvShowData()
-        self.tvShowData?.getTopTvShows().subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
+        self.tvShowData?.getTvShowsArray(stringQuery: nil).subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {
                 self.tvShows.append($0)
