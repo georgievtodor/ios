@@ -1,6 +1,6 @@
 protocol SeasonModelDelegate {
-    var episodes: [EpisodeModelDelegate] { get set }
-    var name: String { get set }
-    var poster: String { get set }
-    var number: String { get set }
+    var seasonId: String { get set }
+    var episodesCount: String { get set }
+    var airDate: String { get set }
+    var seasonNumber: String { get set }
 }

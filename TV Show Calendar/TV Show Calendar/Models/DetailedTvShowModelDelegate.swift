@@ -1,9 +1,8 @@
-//
-//  DetailedTvShowModelDelegate.swift
-//  TV Show Calendar
-//
-//  Created by Todor on 4/1/17.
-//  Copyright © 2017 Todor. All rights reserved.
-//
-
-import Foundation
+protocol DetailedTvShowModelDelegate {
+    var id: String { get set }
+    var name: String { get set }
+    var description: String { get set }
+    var imagePath: String { get set }
+    var backDropPath: String { get set }
+    var rating: String { get set }
+}

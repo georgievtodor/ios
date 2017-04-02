@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -114,6 +115,7 @@
                     <connections>
                         <outlet property="backDropImage" destination="3Wj-Jw-Amd" id="RiG-WJ-p7m"/>
                         <outlet property="name" destination="xRq-hP-Zcm" id="pYy-Ns-Wde"/>
+                        <outlet property="seasonsTableView" destination="6Jt-GD-l9B" id="ggt-JK-oue"/>
                         <outlet property="tvShowDescription" destination="ekl-oc-3Vy" id="S1A-bm-QwG"/>
                     </connections>
                 </viewController>
@@ -133,31 +135,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Pk-gw-MSJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Pk-gw-MSJ">
                                 <rect key="frame" x="16" y="161" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTj-8B-bku">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTj-8B-bku">
                                 <rect key="frame" x="16" y="108" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AY1-bK-Adu">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AY1-bK-Adu">
                                 <rect key="frame" x="16" y="209" width="343" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ey7-L3-YUZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ey7-L3-YUZ">
                                 <rect key="frame" x="16" y="260" width="343" height="407"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ey7-L3-YUZ" firstAttribute="leading" secondItem="r5u-JE-Vyl" secondAttribute="leadingMargin" id="49m-ve-Eck"/>
+                            <constraint firstItem="Ey7-L3-YUZ" firstAttribute="top" secondItem="AY1-bK-Adu" secondAttribute="bottom" constant="8" id="5IX-sI-Xha"/>
+                            <constraint firstItem="1Pk-gw-MSJ" firstAttribute="top" secondItem="tTj-8B-bku" secondAttribute="bottom" constant="23" id="HrF-Dx-nmD"/>
+                            <constraint firstItem="AY1-bK-Adu" firstAttribute="top" secondItem="1Pk-gw-MSJ" secondAttribute="bottom" constant="18" id="Jdo-82-NOc"/>
+                            <constraint firstItem="AY1-bK-Adu" firstAttribute="leading" secondItem="r5u-JE-Vyl" secondAttribute="leadingMargin" id="LFX-BI-GG3"/>
+                            <constraint firstItem="tTj-8B-bku" firstAttribute="top" secondItem="d9d-ft-cd4" secondAttribute="bottom" constant="88" id="Yj0-Xi-2Ca"/>
+                            <constraint firstItem="1Pk-gw-MSJ" firstAttribute="trailing" secondItem="r5u-JE-Vyl" secondAttribute="trailingMargin" id="cqX-rL-qAR"/>
+                            <constraint firstItem="tTj-8B-bku" firstAttribute="leading" secondItem="r5u-JE-Vyl" secondAttribute="leadingMargin" id="g2S-Oi-7V6"/>
+                            <constraint firstItem="tTj-8B-bku" firstAttribute="trailing" secondItem="r5u-JE-Vyl" secondAttribute="trailingMargin" id="gaK-YE-jmf"/>
+                            <constraint firstItem="AY1-bK-Adu" firstAttribute="trailing" secondItem="r5u-JE-Vyl" secondAttribute="trailingMargin" id="jOi-4e-atw"/>
+                            <constraint firstItem="1Pk-gw-MSJ" firstAttribute="leading" secondItem="r5u-JE-Vyl" secondAttribute="leadingMargin" id="oBc-xw-zpj"/>
+                            <constraint firstItem="Ey7-L3-YUZ" firstAttribute="top" secondItem="AY1-bK-Adu" secondAttribute="bottom" constant="8" id="pBm-M6-rCw"/>
+                            <constraint firstItem="ymA-e7-iBM" firstAttribute="top" secondItem="Ey7-L3-YUZ" secondAttribute="bottom" id="sYO-a9-r4c"/>
+                            <constraint firstItem="1Pk-gw-MSJ" firstAttribute="top" secondItem="tTj-8B-bku" secondAttribute="bottom" constant="23" id="sgP-jU-TeF"/>
+                            <constraint firstItem="Ey7-L3-YUZ" firstAttribute="trailing" secondItem="r5u-JE-Vyl" secondAttribute="trailingMargin" id="t4d-tk-eyg"/>
+                            <constraint firstItem="AY1-bK-Adu" firstAttribute="top" secondItem="1Pk-gw-MSJ" secondAttribute="bottom" constant="18" id="xzh-wy-nHc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhI-AB-ceU" userLabel="First Responder" sceneMemberID="firstResponder"/>

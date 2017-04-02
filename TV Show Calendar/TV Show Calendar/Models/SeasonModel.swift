@@ -1,6 +1,6 @@
 struct SeasonModel: SeasonModelDelegate {
-    var episodes: [EpisodeModelDelegate]
-    var name: String
-    var poster: String
-    var number: String
+    var seasonId: String
+    var episodesCount: String
+    var airDate: String
+    var seasonNumber: String
 }

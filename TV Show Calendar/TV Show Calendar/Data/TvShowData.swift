@@ -10,7 +10,7 @@ class TvShowData: TvShowDataDelegate {
     }
     
     func getTopTvShows() -> Observable<TvShowModelDelegate> {
-    
+        
         return self.httpRequester.get(TheMovieDbConstants.popularTvShows)
             .filter { $0.body != nil }
             .flatMap { Observable.from(JSON($0.body!)["results"].arrayValue) }
@@ -25,24 +25,35 @@ class TvShowData: TvShowDataDelegate {
                 
                 return TvShowModel(id: id, imagePath: imagePath, backDropPath: backDropPath, name: name, description: description, rating:
                     rating)
-        }
+            }
             .filter { $0 != nil }
             .map { $0! }
     }
     
     
-  //  func getTvShow(_ id: String) -> Observable<TvShowModelDelegate> {
- ///       return self.httpRequester.get(TheMovieDbConstants.getTvDetailsUrl(id))
- //           .filter { $0.body != nil }
- //           .flatMap { Observable.from(JSON($0.body!)["results"].arrayValue) }
- //           .map {
-//                detailedTvShow in
-//                let id = detailedTvShow[
-//        }
-//    }
-
-//    func getTvShowSeasonEpisodes(_ seasonNumber: String, _ tvShowId: String) -> Observable<SeasonModelDelegate> {
-//
-//    }
+    func getTvShow(_ id: String) -> Observable<SeasonModelDelegate> {
+        let url = TheMovieDbConstants.getTvDetailsUrl(serialId: id)
+        
+        return self.httpRequester.get(url)
+            .filter { $0.body != nil }
+            .flatMap { Observable.from(JSON($0.body!)["seasons"].arrayValue) }
+            .map {
+                detailedTvShow in
+                let seasonId = detailedTvShow["id"].stringValue
+                let episodesCount = detailedTvShow["episode_count"].stringValue
+                let airDate = detailedTvShow["air_date"].stringValue
+                let seasonNumber = detailedTvShow["season_number"].stringValue
+                
+                return SeasonModel(seasonId: seasonId, episodesCount: episodesCount, airDate: airDate, seasonNumber: seasonNumber)
+                
+            }
+            .filter { $0 != nil }
+            .map { $0! }
+        
+    }
+    
+    //    func getTvShowSeasonEpisodes(_ seasonNumber: String, _ tvShowId: String) -> Observable<SeasonModelDelegate> {
+    //
+    //    }
 }
 

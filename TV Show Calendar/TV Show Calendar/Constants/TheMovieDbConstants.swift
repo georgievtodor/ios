@@ -10,8 +10,9 @@ public final class TheMovieDbConstants {
         return "\(TheMovieDbConstants.tMDBApiUrl)/search/tv\(TheMovieDbConstants.tMDBApiKey)&language=en-US&query=\(query)&page=1"
     }
     
-    func getTvDetailsUrl(serialId id: String) -> String {
-        return "\(TheMovieDbConstants.tvShowsBaseUrl)/\(id)\(TheMovieDbConstants.tMDBApiKey)"
+    static func getTvDetailsUrl(serialId id: String) -> String {
+        let url = "\(TheMovieDbConstants.tvShowsBaseUrl)/\(id)\(TheMovieDbConstants.tMDBApiKey)"
+        return url
     }
     
     func getSeasonDetailsUrl(serialId id: String, _ seasonNumber: Int) -> String {
