@@ -38,12 +38,14 @@ class TvShowViewController: UIViewController, UITableViewDataSource, UITableView
         self.tvShowData = TvShowData()
         self.localData = LocalData()
         
+        self.startLoading()
+        
         tvShowData?.getTvShow((tvShow?.id)!).subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {
                 self.seasons.append($0)
             }, onCompleted: {
-                
+                self.stopLoading()
             })
             .disposed(by: disposeBag)
         

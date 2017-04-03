@@ -22,12 +22,16 @@ class EpisodesTableViewController: UITableViewController {
         let cellNib = UINib(nibName: "EpisodeViewCell", bundle: nil)
         self.tableView.register(cellNib, forCellReuseIdentifier: reuseIdentifier)
         
+        self.startLoading()
+        
         tvShowData = TvShowData()
         tvShowData?.getTvShowSeasonEpisodes(seasonNumber!, id!)
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {
                 self.tvShowEpisodes.append($0)
+            }, onCompleted: {
+                self.stopLoading()
             })
             .disposed(by: disposeBag)
     }

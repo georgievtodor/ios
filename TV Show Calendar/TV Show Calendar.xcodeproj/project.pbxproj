@@ -36,6 +36,7 @@
 		C8970DF51E8DCF1C00908100 /* SeasonModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DF41E8DCF1C00908100 /* SeasonModelDelegate.swift */; };
 		C8970DF71E8DCF2700908100 /* SeasonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8970DF61E8DCF2700908100 /* SeasonModel.swift */; };
 		C8B59AA61E91464D0002B2BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B59AA51E91464D0002B2BA /* SearchViewController.swift */; };
+		C8CFE7A71E91CE77007347EC /* View+LoadingFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CFE7A61E91CE77007347EC /* View+LoadingFrame.swift */; };
 		C8D172F01E8405230041DB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D172EF1E8405230041DB54 /* AppDelegate.swift */; };
 		C8D172F51E8405230041DB54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D172F31E8405230041DB54 /* Main.storyboard */; };
 		C8D172F81E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8D172F61E8405230041DB54 /* TV_Show_Calendar.xcdatamodeld */; };
@@ -74,6 +75,7 @@
 		C8970DF41E8DCF1C00908100 /* SeasonModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonModelDelegate.swift; path = Models/SeasonModelDelegate.swift; sourceTree = "<group>"; };
 		C8970DF61E8DCF2700908100 /* SeasonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonModel.swift; path = Models/SeasonModel.swift; sourceTree = "<group>"; };
 		C8B59AA51E91464D0002B2BA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ViewControllers/SearchViewController.swift; sourceTree = "<group>"; };
+		C8CFE7A61E91CE77007347EC /* View+LoadingFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "View+LoadingFrame.swift"; path = "Extensions/View+LoadingFrame.swift"; sourceTree = "<group>"; };
 		C8D172EC1E8405230041DB54 /* TV Show Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TV Show Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D172EF1E8405230041DB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D172F41E8405230041DB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				C88EDF1C1E8FD96700B7318F /* UIImageView+ImageFromUrl.swift */,
+				C8CFE7A61E91CE77007347EC /* View+LoadingFrame.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				C8D172F01E8405230041DB54 /* AppDelegate.swift in Sources */,
 				C892AF471E91222B007B2828 /* EpisodeViewCell.swift in Sources */,
 				C8970DDF1E8DC01F00908100 /* EpisodeModel.swift in Sources */,
+				C8CFE7A71E91CE77007347EC /* View+LoadingFrame.swift in Sources */,
 				C8970DE11E8DC05700908100 /* HttpRequester.swift in Sources */,
 				C83E29DD1E9182BA00D517EA /* LocalData.swift in Sources */,
 			);

@@ -9,7 +9,7 @@ target 'TV Show Calendar' do
   pod 'SwiftyJSON','~> 3.1'
   pod 'RxSwift',   '~> 3.0'
   pod 'Kingfisher', '~> 3.0'
-  pod 'SQLite.swift'
+  pod 'SVProgressHUD'
   # Pods for TV Show Calendar
   
 end

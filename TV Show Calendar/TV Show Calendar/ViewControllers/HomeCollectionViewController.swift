@@ -23,13 +23,16 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         // Register cell classes
         self.collectionView?.register(cellNib, forCellWithReuseIdentifier: reuseIdentifier)
         // Do any additional setup after loading the view.
-
+        
+        self.startLoading()
+        
         self.tvShowData = TvShowData()
         self.tvShowData?.getTvShowsArray(stringQuery: nil).subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {
                 self.tvShows.append($0)
-                }, onCompleted: {
+            }, onCompleted: {
+                self.stopLoading()
             })
             .disposed(by: disposeBag)
     }
@@ -69,7 +72,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         cell.tvShowRating.text = tvShow.rating
         cell.tvShowName.text = tvShow.name
         cell.tvShowImage.setImageFromUrl(imageUrl: URL(string: tvShow.imagePath!)!)
-       
+        
         return cell
     }
     

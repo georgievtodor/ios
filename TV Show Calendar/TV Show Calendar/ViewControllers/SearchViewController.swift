@@ -35,12 +35,16 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         if((query?.characters.count)! > 3) {
             handle = setTimeout(delay: 1, block: {
             self.tvShows = [TvShowModelDelegate]()
-            
+                
+            self.startLoading()
+                
             self.tvShowData?.getTvShowsArray(stringQuery: query!.replacingOccurrences(of: " ", with: "%20"))
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: {
                     self.tvShows.append($0)
+                }, onCompleted: {
+                    self.stopLoading()
                 })
                 .disposed(by: self.disposeBag)
             })
