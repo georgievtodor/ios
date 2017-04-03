@@ -24,7 +24,7 @@ class FollowingTableViewController: UITableViewController {
         let followingTvShows = data?.getAll()
         followingTvShows?.forEach {
             tvShow in
-            let curr = TvShowModel(id: tvShow.id!, imagePath: tvShow.imagePath, backDropPath: tvShow.backDropPath, name: tvShow.name!, description: tvShow.description, rating: tvShow.rating)
+            let curr = TvShowModel(id: tvShow.id!, imagePath: tvShow.imagePath, backDropPath: tvShow.backDropPath, name: tvShow.name!, description: tvShow.tvDescription, rating: tvShow.rating)
             tvShows.append(curr)
             
         }
@@ -40,6 +40,14 @@ class FollowingTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TvShowVC") as! TvShowViewController
+        
+        nextVC.tvShow = self.tvShows[indexPath.row]
+        
+        self.show(nextVC, sender: self)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
