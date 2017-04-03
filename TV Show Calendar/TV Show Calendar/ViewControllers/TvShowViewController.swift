@@ -47,11 +47,25 @@ class TvShowViewController: UIViewController, UITableViewDataSource, UITableView
             })
             .disposed(by: disposeBag)
         
+        setButtonText()
     }
     
     @IBAction func follow(_ sender: Any) {
-        localData?.save(tvShow: tvShow!)
-        followButton.titleLabel?.text = "Unfollow"
+        if(localData?.checkIfExists(tvShowId: (tvShow?.id)!))! {
+            followButton.setTitle("Follow", for: .normal)
+            localData?.deleteTvShow(tvShowId: (tvShow?.id)!)
+        } else {
+            followButton.setTitle("Unfollow", for: .normal)
+            localData?.save(tvShow: tvShow!)
+        }
+    }
+    
+    func setButtonText() {
+        if(localData?.checkIfExists(tvShowId: (tvShow?.id)!))! {
+            followButton.setTitle("Unfollow", for: .normal)
+        } else {
+            followButton.setTitle("Follow", for: .normal)
+        }
     }
     
     override func didReceiveMemoryWarning() {
