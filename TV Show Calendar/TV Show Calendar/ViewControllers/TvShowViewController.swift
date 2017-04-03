@@ -24,7 +24,7 @@ class TvShowViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrollView.frame = view.frame
-        self.tvShowDescription.text = tvShow?.description
+        self.tvShowDescription.text = tvShow?.description?.trunc(length: 150)
         self.name.text = tvShow?.name
         self.backDropImage.setImageFromUrl(imageUrl: URL(string: (self.tvShow?.backDropPath)!)!)
         self.backDropImage.contentMode = .scaleAspectFit
@@ -98,8 +98,5 @@ class TvShowViewController: UIViewController, UITableViewDataSource, UITableView
         cell.backgroundColor = view.backgroundColor
         return cell
     }
-    
-    
- 
     
 }

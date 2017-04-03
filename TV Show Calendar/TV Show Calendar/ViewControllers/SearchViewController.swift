@@ -65,7 +65,6 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.didReceiveMemoryWarning()
         collectionView.delegate = self
         collectionView.dataSource = self
-        // Dispose of any resources that can be recreated.
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -99,17 +98,6 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         self.show(nextVC, sender: self)
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     func setTimeout(delay:TimeInterval, block:@escaping ()->Void) -> Timer {
         return Timer.scheduledTimer(timeInterval: delay, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: false)

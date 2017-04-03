@@ -20,7 +20,6 @@ class TvShowData: TvShowDataDelegate {
         }
     
         return self.httpRequester.get(url!)
-            .filter { $0.body != nil }
             .flatMap { Observable.from(JSON($0.body!)["results"].arrayValue) }
             .map {
                 serialJson in

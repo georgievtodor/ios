@@ -1,11 +1,3 @@
-//
-//  EpisodeViewCell.swift
-//  TV Show Calendar
-//
-//  Created by Todor on 4/2/17.
-//  Copyright © 2017 Todor. All rights reserved.
-//
-
 import UIKit
 
 class EpisodeViewCell: UITableViewCell {
@@ -16,13 +8,10 @@ class EpisodeViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

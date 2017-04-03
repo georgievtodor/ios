@@ -15,14 +15,9 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
+       
         let cellNib = UINib(nibName: "SerialViewCell", bundle: nil)
-        // Register cell classes
         self.collectionView?.register(cellNib, forCellWithReuseIdentifier: reuseIdentifier)
-        // Do any additional setup after loading the view.
         
         self.startLoading()
         
@@ -39,7 +34,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

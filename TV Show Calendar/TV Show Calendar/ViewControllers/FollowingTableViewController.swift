@@ -1,11 +1,3 @@
-//
-//  FollowingTableViewController.swift
-//  TV Show Calendar
-//
-//  Created by Todor on 4/2/17.
-//  Copyright © 2017 Todor. All rights reserved.
-//
-
 import UIKit
 
 class FollowingTableViewController: UITableViewController {
